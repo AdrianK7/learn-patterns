@@ -1,5 +1,6 @@
 package main.pattern.observer;
 
-public class Mage implements IRiftAttacker {
-	IPlayerService service;
+public class Mage implements IRiftAttacker
+{
+   IPlayerService service;
 }

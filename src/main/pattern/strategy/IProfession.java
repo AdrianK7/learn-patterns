@@ -1,8 +1,9 @@
 package main.pattern.strategy;
 
-public interface IProfession {
+public interface IProfession
+{
 
-	public ISkill getSkill();
-	
-	public void teachProfession();
+   public ISkill getSkill();
+
+   public void teachProfession();
 }
