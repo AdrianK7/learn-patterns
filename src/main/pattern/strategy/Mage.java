@@ -2,7 +2,7 @@ package main.pattern.strategy;
 
 import java.util.Objects;
 
-public class Mage implements ITeacher, INpc {
+public class Mage implements ITeacher {
 	private IProfession profession = new MageProfession();
 
 	@Override
@@ -23,8 +23,21 @@ public class Mage implements ITeacher, INpc {
 		return profession.getSkill().getSkillDescription();
 	}
 
+	public IProfession getProfession() {
+		return profession;
+	}
+
+	public void setProfession(IProfession profession) {
+		this.profession = profession;
+	}
+
 	public void introduceYourself() {
 		System.out.println("I'm a master of arcane arts!");
+	}
+
+	@Override
+	public String identity() {
+		return "MAGE";
 	}
 
 }
