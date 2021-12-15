@@ -1,12 +1,10 @@
 package main.pattern.observer;
 
-public interface IRiftKeeper
+public interface IRiftKeeper extends INpc
 {
-   public void openRift();
+   public static final String ROLE_NAME = "keeper";
 
-   public void closeRift();
-
-   public void checkRiftState();
-
-   public void checkRiftHP();
+   public void startKeeperDuty(IKeeperService service);
+   
+   public void stopKeeperDuty(IKeeperService service);
 }

@@ -1,12 +1,20 @@
 package main.pattern.observer;
 
-public interface IKeeperService
+import main.pattern.observer.IRift.RiftState;
+
+public interface IKeeperService extends IRiftInvolvement
 {
-   public String getState();
+   public String showRiftState();
+
+   public RiftState getRiftState();
 
    public int getCurrentHealth();
 
    public void close();
 
    public void open();
+
+   public boolean startKeeperDuty();
+
+   public boolean stopKeeperDuty();
 }
